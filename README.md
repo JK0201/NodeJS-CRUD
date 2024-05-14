@@ -25,7 +25,7 @@
     <p> - 회원가입/로그인 빠른이동
     <p> - 로그인시 로그아웃
     <p> - position:sticky를 활용한 간략한 페이지 소개</p>
-    <br>
+    <hr>
   </details>
   
   <details>
