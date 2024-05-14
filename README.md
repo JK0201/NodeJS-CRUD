@@ -41,7 +41,7 @@
     <p><b># 로그인 페이지</b></p>
     <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/f4d17add-900d-46c7-805c-60727394bfd7" width="45%"/>
     <br>
-    <p> - Passport 라이브러리를 활용한 세션방식의 간단한 로그인기능</p>
+    <p> - Passport 라이브러리를 활용한 간단한 세션 방식 로그인 기능</p>
     <p> - [회원기능]이 필요한 요청에 대해 session체크 함수를 만들어 미들웨어로 활용</p>
     <hr>
   </details>
