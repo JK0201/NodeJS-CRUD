@@ -32,7 +32,7 @@
     <summary><b>회원가입/로그인</b></summary>
     <br>
     <p><b># 회원가입 페이지</b></p>
-    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/441ad8a3-398f-4324-b19b-d9a9b6fdd384" width="45%"/>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/441ad8a3-398f-4324-b19b-d9a9b6fdd384" width="45%" style="border-radius:50%"/>
     <br>
     <p> - 아이디/비밀번호/닉네임 유효성검사
     <p> - 아이디 중복검사</p>
