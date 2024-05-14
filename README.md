@@ -69,5 +69,23 @@
     <p> - 글 작성자와 해당 게시물에 대한 1:1 채팅 기능 [회원기능]</p>
     <hr>
   </details>
+
+  <details>
+    <summary><b>채팅</b></summary>
+    <br>
+    <p><b># 회원가입 페이지</b></p>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/441ad8a3-398f-4324-b19b-d9a9b6fdd384" width="45%" />
+    <br>
+    <p> - 아이디/비밀번호/닉네임 유효성검사
+    <p> - 아이디 중복검사</p>
+    <p> - Bcrypt + Salt 기능을 활용한 비밀번호 해싱</p>
+    <br>
+    <p><b># 로그인 페이지</b></p>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/f4d17add-900d-46c7-805c-60727394bfd7" width="45%"/>
+    <br>
+    <p> - Passport 라이브러리를 활용한 세션방식의 간단한 로그인기능</p>
+    <p> - [회원기능]이 필요한 요청에 대해 session체크 함수를 만들어 미들웨어로 활용</p>
+    <hr>
+  </details>
   
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:16213E,10:0F3460,30:533483,75:5B2A86,100:E94560&height=40&section=footer&text=&fontSize=0" width="100%"/>
