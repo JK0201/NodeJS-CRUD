@@ -41,9 +41,9 @@
   <details>
     <summary><b>게시판</b></summary>
     <br>
+    <p><b>글 목록</b></p>
     <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/76dd6371-8fe7-4eb2-a0a0-981c849b62dc" width="45%"/>
     <br>
-    <p> - 글 목록</p>
     <p> - 게시물 검색기능</p>
     <hr>
     <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/2bd77ade-926c-453d-bee8-e93c89d448dc" width="45%"/>
