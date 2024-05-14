@@ -19,7 +19,7 @@
   <details>
     <summary><b>메인페이지</b></summary>
     <br>
-    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/54f3d577-7f5f-41cf-8ca4-c628e0ca76aa" width="45%"/>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/cdb6f703-0733-43e8-920c-2e54b132dbf7" width="45%"/>
     <br>
     <p> - 빠른 페이지 이동을 위한 네비게이션 기능</p>
     <p> - 회원가입/로그인 빠른이동
@@ -31,7 +31,7 @@
   <details>
     <summary><b>회원가입/로그인</b></summary>
     <br>
-    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/abecc220-16af-4240-9cac-303f013c93eb" width="45%"/>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/441ad8a3-398f-4324-b19b-d9a9b6fdd384" width="45%"/>
     <br>
     <p> - 글 목록</p>
     <p> - 게시물 검색기능</p>
@@ -41,19 +41,19 @@
   <details>
     <summary><b>게시판</b></summary>
     <br>
-    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/546bf90a-06b2-402f-9806-bec6cf9ca0cd" width="45%"/>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/76dd6371-8fe7-4eb2-a0a0-981c849b62dc" width="45%"/>
     <br>
     <p> - 글 목록</p>
     <p> - 게시물 검색기능</p>
     <br>
-    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/29ab2a8c-5e94-4826-a10b-7eeeba77a151" width="45%"/>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/2bd77ade-926c-453d-bee8-e93c89d448dc" width="45%"/>
     <br>
     <p> - 글 작성/수정 [회원기능]</p>
     <p> - 배열을 활용한 업로드 이미지 핸들링</p>
     <p> - 캐러셀 기능을 활용한 업로드 이미지 미리보기</p>
     <br>
-    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/5491f771-0cae-407a-9150-61ef6842b699" width="45%"/>
-    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/1181bdcc-d6c4-447c-9dbe-2e73672d8f3f" width="45%"/>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/4fcd69cf-db05-48b5-b2a5-f95e68d11286" width="45%"/>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/baa55cf0-d8fe-476e-a725-03777e4c11d4" width="45%"/>
     <br>
     <p> - 글 내용 조회 </p>
     <p> - 본인 게시물 삭제/수정 [회원기능]</p>
