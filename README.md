@@ -49,7 +49,7 @@
   <details>
     <summary><b>게시판</b></summary>
     <br>
-    <p><b># 글 목록 페이지</b></p>
+    <p><b># 글 리스트 페이지</b></p>
     <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/76dd6371-8fe7-4eb2-a0a0-981c849b62dc" width="45%"/>
     <br>
     <p> - 게시물 검색기능</p>
@@ -57,9 +57,9 @@
     <p><b># 글 작성/수정 페이지 [회원기능]</b></p>
     <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/2bd77ade-926c-453d-bee8-e93c89d448dc" width="45%"/>
     <br>
-    <p> - 배열을 활용한 업로드 이미지 핸들링(이미지 추가/삭제)</p>
+    <p> - 배열을 활용한 이미지 핸들링(이미지 추가/삭제)</p>
     <p> - 캐러셀 기능을 활용한 업로드 이미지 미리보기</p>
-    <p> - Multer 라이브러리를 사용해 이미지 업로드</p>
+    <p> - Multer 라이브러리를 사용한 다중 이미지 업로드</p>
     <br>
     <p><b># 글 내용 조회 페이지</b></p>
     <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/4fcd69cf-db05-48b5-b2a5-f95e68d11286" width="45%"/>
@@ -73,18 +73,15 @@
   <details>
     <summary><b>채팅 [회원기능]</b></summary>
     <br>
-    <p><b># 회원가입 페이지</b></p>
-    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/441ad8a3-398f-4324-b19b-d9a9b6fdd384" width="45%" />
+    <p><b># 채팅 리스트 페이지</b></p>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/0033050a-1371-4cc9-919d-8120f518d4e9" width="45%" />
     <br>
     <p> - 아이디/비밀번호/닉네임 유효성검사
-    <p> - 아이디 중복검사</p>
-    <p> - Bcrypt + Salt 기능을 활용한 비밀번호 해싱</p>
     <br>
-    <p><b># 로그인 페이지</b></p>
-    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/f4d17add-900d-46c7-805c-60727394bfd7" width="45%"/>
+    <p><b># 1:1 채팅 페이지</b></p>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/0ac3dd5b-0433-45ad-ac69-e5e4a12edbf9" width="45%"/>
     <br>
     <p> - Passport 라이브러리를 활용한 세션방식의 간단한 로그인기능</p>
-    <p> - [회원기능]이 필요한 요청에 대해 session체크 함수를 만들어 미들웨어로 활용</p>
     <hr>
   </details>
   
