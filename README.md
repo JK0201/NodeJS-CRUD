@@ -23,7 +23,7 @@
     <br>
     <p> - 빠른 페이지 이동을 위한 네비게이션 기능</p>
     <p> - 회원가입/로그인 빠른이동
-    <p> - 로그인시 로그아웃
+    <p> - 회원 로그인시 로그아웃
     <p> - position:sticky를 활용한 간략한 페이지 소개</p>
     <hr>
   </details>
@@ -31,10 +31,18 @@
   <details>
     <summary><b>회원가입/로그인</b></summary>
     <br>
+    <p><b># 회원가입 페이지</b></p>
     <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/441ad8a3-398f-4324-b19b-d9a9b6fdd384" width="45%"/>
     <br>
-    <p> - 글 목록</p>
-    <p> - 게시물 검색기능</p>
+    <p> - 아이디/비밀번호/닉네임 유효성검사
+    <p> - 아이디 중복검사</p>
+    <p> - Bcrypt + Salt 기능을 활용한 비밀번호 해싱</p>
+    <p><b># 글 내용 조회 페이지</b></p>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/4fcd69cf-db05-48b5-b2a5-f95e68d11286" width="45%"/>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/baa55cf0-d8fe-476e-a725-03777e4c11d4" width="45%"/>
+    <br>
+    <p> - 본인 게시물 삭제/수정 [회원기능]</p>
+    <p> - 글 작성자와 해당 게시물에 대한 1:1 채팅 기능 [회원기능]</p>
     <hr>
   </details>
   
