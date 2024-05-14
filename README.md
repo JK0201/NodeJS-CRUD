@@ -87,4 +87,7 @@
     <hr>
   </details>
   <br>
+  <div align="center">
+    <p><b>- End of document -</b></p>
+  </div>
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:16213E,10:0F3460,30:533483,75:5B2A86,100:E94560&height=40&section=footer&text=&fontSize=0" width="100%"/>
