@@ -41,25 +41,25 @@
   <details>
     <summary><b>게시판</b></summary>
     <br>
-    <p><b>글 목록</b></p>
+    <p color=58A6FF><b>글 목록</b></p>
     <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/76dd6371-8fe7-4eb2-a0a0-981c849b62dc" width="45%"/>
     <br>
     <p> - 게시물 검색기능</p>
-    <hr><br>
+    <hr>
     <p><b>글 작성/수정 [회원기능]</b></p>
     <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/2bd77ade-926c-453d-bee8-e93c89d448dc" width="45%"/>
     <br>
     <p> - 배열을 활용한 업로드 이미지 핸들링(이미지 추가/삭제)</p>
     <p> - 캐러셀 기능을 활용한 업로드 이미지 미리보기</p>
     <p> - Multer 라이브러리를 사용해 이미지 업로드</p>
-    <hr><br>
+    <hr>
+    <p><b>글 내용 조회</b></p>
     <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/4fcd69cf-db05-48b5-b2a5-f95e68d11286" width="45%"/>
     <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/baa55cf0-d8fe-476e-a725-03777e4c11d4" width="45%"/>
     <br>
-    <p> - 글 내용 조회 </p>
     <p> - 본인 게시물 삭제/수정 [회원기능]</p>
     <p> - 글 작성자와 해당 게시물에 대한 1:1 채팅 기능 [회원기능]</p>
-    <hr><br>
+    <hr>
   </details>
   
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:16213E,10:0F3460,30:533483,75:5B2A86,100:E94560&height=40&section=footer&text=&fontSize=0" width="100%"/>
