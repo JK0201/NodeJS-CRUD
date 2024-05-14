@@ -82,9 +82,9 @@
     <p><b># 1:1 채팅 페이지</b></p>
     <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/0ac3dd5b-0433-45ad-ac69-e5e4a12edbf9" width="45%"/>
     <br>
-    <p> - SSE(Server-Sent-Events)를 이용한 서버에서 클라이언트로 이벤트를 전달하는 단방향 통신 채팅방</p>
-    <p> - 파이프라인을 만들어 데이터베이스 변화를 감지하고 실시간 메세지 업데이트</p>
+    <p> - SSE(Server-Sent-Events)를 이용한 서버에서 클라이언트로 실시간으로 이벤트를 전달하는 단방향 통신 채팅방</p>
+    <p> - 파이프라인을 만들어 POST요청이 발생할 때, MongoDB의 컬렉션 변화를 실시간으로 감지하고 메세지 업데이트</p>
     <hr>
   </details>
-  
+  <br>
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:16213E,10:0F3460,30:533483,75:5B2A86,100:E94560&height=40&section=footer&text=&fontSize=0" width="100%"/>
