@@ -37,12 +37,12 @@
     <p> - 아이디/비밀번호/닉네임 유효성검사
     <p> - 아이디 중복검사</p>
     <p> - Bcrypt + Salt 기능을 활용한 비밀번호 해싱</p>
-    <p><b># 글 내용 조회 페이지</b></p>
-    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/4fcd69cf-db05-48b5-b2a5-f95e68d11286" width="45%"/>
-    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/baa55cf0-d8fe-476e-a725-03777e4c11d4" width="45%"/>
+    <hr>
+    <p><b># 로그인 페이지</b></p>
+    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/f4d17add-900d-46c7-805c-60727394bfd7" width="45%"/>
     <br>
-    <p> - 본인 게시물 삭제/수정 [회원기능]</p>
-    <p> - 글 작성자와 해당 게시물에 대한 1:1 채팅 기능 [회원기능]</p>
+    <p> - </p>
+    <p> - </p>
     <hr>
   </details>
   
