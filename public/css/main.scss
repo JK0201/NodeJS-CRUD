@@ -1,0 +1,318 @@
+html {
+  user-select: none;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.main-intro {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  background-color: black;
+
+  .main-intro-detail {
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+
+    h1 {
+      color: white;
+    }
+  }
+  &:hover img {
+    transform: scale(1);
+  }
+}
+
+.main-intro img {
+  width: 100%;
+  transform: scale(0.9);
+  transition: all 0.5s;
+  filter: brightness(0.7);
+}
+
+.intro-scroll {
+  height: 3000px;
+  .intro-img-box {
+    position: sticky;
+    top: 150px;
+    margin-top: 300px;
+  }
+  .first {
+    margin-top: 0;
+  }
+
+  .intro-scroll-img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.sign-up-form,
+.sign-in-form {
+  width: 75%;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 7px 7px #eee;
+
+  h1 {
+    margin: 0 0 2rem 0;
+  }
+
+  .submit-btn {
+    margin: 1rem 0 0 0;
+  }
+}
+
+.list-box {
+  position: relative;
+}
+
+.posting-btn,
+.chat-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: 5;
+  border: 1px solid #eee;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  color: white;
+  background-color: #212529;
+  cursor: pointer;
+}
+
+.card-box {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card {
+    margin: 2.5%;
+    width: 45%;
+    min-height: 445.5px;
+    max-height: 581.5px;
+  }
+}
+
+.card-writer {
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+  p {
+    margin: 0.5rem 0 0 0;
+  }
+}
+
+.card-box-posting {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .card-posting {
+    margin: 2.5%;
+    max-width: 700px;
+    width: 100%;
+  }
+}
+
+.detail-title {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.card-text {
+  min-height: 72px;
+}
+
+.list-bottom {
+  width: 100%;
+  height: 4rem;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.content {
+  height: 10rem;
+  resize: none;
+}
+
+.upload-box {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .img-box {
+    display: flex;
+    align-items: center;
+    transform: translateX(0%);
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+    max-height: 465.36px;
+    flex-shrink: 0;
+  }
+
+  .upload-box-cover {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    font-size: 5rem;
+    transition: all 0.5s;
+  }
+
+  .del-btn-box {
+    display: flex;
+    justify-content: flex-end;
+    max-height: 80px;
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  .del-btn {
+    visibility: hidden;
+    color: rgb(255, 80, 80);
+    cursor: pointer;
+  }
+
+  .upload-input {
+    display: none;
+  }
+
+  .upload-btn-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    max-height: 80px;
+  }
+
+  .upload-btn {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+
+  .slide-page-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  .slide-page {
+    margin-right: 0.8rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #212529;
+    border: 1px solid gray;
+    border-radius: 50%;
+  }
+
+  .current-slide {
+    background-color: white;
+  }
+}
+
+.card-img-list {
+  // min-height: 326.2px;
+  max-height: 387.48px;
+  cursor: pointer;
+}
+
+.card-img-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .card-img-badge {
+    position: absolute;
+    top: 2.5%;
+    right: 2.5%;
+    font-size: 0.9rem;
+  }
+}
+
+.no-result {
+  color: gray;
+  .no-result-icon {
+    font-size: 4rem;
+  }
+}
+
+.chat-info {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+
+  .chat-list-img {
+    border-radius: 10px;
+    width: 20%;
+  }
+
+  h4 {
+    margin-left: 1rem;
+  }
+}
+
+.chat-body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.msg-box {
+  width: 100%;
+  padding: 0.5rem;
+
+  .msg {
+    float: left;
+    max-width: 40%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+
+  .mine {
+    float: right;
+    color: white;
+    background-color: #212529;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-box {
+    .card {
+      margin: 1rem;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Node.JS Prac</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="/public/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <%-include('navbar.ejs')%>
+      <div class="p-3">
+        <div class="main-intro mx-auto">
+          <div class="main-intro-detail">
+            <% if(user == 'none') {%>
+            <h1>Node.JS Prac Page</h1>
+            <div class="no-session mt-3">
+              <button type="button" class="btn btn-outline-light sign-up">회원가입</button>
+              <button type="button" class="btn btn-outline-light sign-in">로그인</button>
+            </div>
+            <%} else {%>
+            <h1><%=user%>님 환영합니다 :)</h1>
+            <div class="no-session mt-3">
+              <button type="button" class="btn btn-outline-light sign-out">로그아웃</button>
+            </div>
+            <%}%>
+          </div>
+          <img src="/public/index-img.jpg" />
+        </div>
+      </div>
+      <h1 class="p-3 my-4 text-center">About page</h1>
+      <div class="intro-scroll">
+        <div class="intro-img-box first">
+          <img src="/public/intro1.jpg" class="intro-scroll-img" />
+        </div>
+        <div class="intro-img-box">
+          <img src="/public/intro2.png" class="intro-scroll-img" />
+        </div>
+        <div class="intro-img-box">
+          <img src="/public/intro3.png" class="intro-scroll-img" />
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $('.sign-up').click(() => {
+        window.location.href = '/member/sign-up';
+      });
+
+      $('.sign-in').click(() => {
+        window.location.href = '/member/sign-in';
+      });
+
+      $('.sign-out').click(() => {
+        $.ajax({
+          method: 'GET',
+          url: '/member/sign-out',
+        })
+          .then((data) => {
+            alert(data.message);
+            location.reload();
+          })
+          .catch((err) => {
+            console.log(err);
+            alert(err.responseJSON.message);
+            return;
+          });
+      });
+
+      $(window).scroll(function (e) {
+        let height = this.scrollY;
+        let yFirst = (-1 / 500) * height + 3;
+        let ySecond = (-1 / 550) * height + 47 / 11;
+
+        let firstSize = (-1 / 2500) * height + 7 / 5;
+        let secondSize = (-1 / 2750) * height + 445 / 275;
+        console.log(secondSize);
+
+        if (yFirst <= 1) {
+          $('.intro-img-box').eq(0).css('opacity', `${yFirst}`);
+        }
+        if (firstSize <= 1) {
+          $('.intro-img-box').eq(0).css('scale', `${firstSize}`);
+        }
+
+        if (ySecond <= 1) {
+          $('.intro-img-box').eq(1).css('opacity', `${ySecond}`);
+        }
+        if (secondSize <= 1) {
+          $('.intro-img-box').eq(1).css('scale', `${secondSize}`);
+        }
+      });
+    </script>
+  </body>
+</html>

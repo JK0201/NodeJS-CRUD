@@ -1,0 +1,338 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Node.JS Prac</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link href="/public/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <%-include('navbar.ejs')%>
+      <div class="list-box">
+        <div class="posting-btn invisible"><i class="bi bi-pencil-square"></i></div>
+        <h1 class="text-center my-4">Posting</h1>
+
+        <div class="card-box-posting">
+          <div class="card card-posting">
+            <div class="upload-box">
+              <div class="img-box">
+                <img src="/public/index-img.jpg" class="card-img-top" alt="itemImg" />
+              </div>
+              <div class="upload-box-cover">
+                <div class="del-btn-box">
+                  <i class="bi bi-x del-btn"></i>
+                </div>
+                <div class="upload-btn-box">
+                  <i class="bi bi-plus-circle upload-btn"></i>
+                </div>
+                <div class="slide-page-box"></div>
+              </div>
+              <input type="file" class="upload-input" accept=".jpg, .jpeg, .png" multiple />
+            </div>
+            <div class="card-body">
+              <p class="card-title mb-2">Title</p>
+              <input type="text" class="form-control title" maxlength="20" />
+              <p class="card-text-content mt-4 mb-2">Content</p>
+              <textarea class="form-control content" maxlength="300"></textarea>
+              <div class="float-end mt-4">
+                <button type="button" class="btn btn-outline-secondary cancle-btn">Cancle</button>
+                <button type="button" class="btn btn-outline-secondary submit-btn">Submit</button>
+              </div>
+            </div>
+          </div>
+          <div class="list-bottom"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let startX = 0;
+      let changedX = 0;
+      let clicked = false;
+      let curSlide = 0;
+      let pageIdx;
+
+      let imgBox = $('.img-box');
+      let slideBox = $('.slide-page-box');
+      let coverBox = $('.upload-box-cover');
+      let imgNum = 0;
+
+      let uploadFiles = [];
+
+      //Upload Btn + Carousel
+      coverBox.mousedown(function (e) {
+        e.preventDefault();
+        imgBox.css('transition', 'none');
+        startX = e.clientX;
+        clicked = true;
+      });
+
+      coverBox.mousemove(function (e) {
+        changedX = e.clientX - startX;
+        if (clicked) {
+          imgBox.css('transform', `translateX(calc(${curSlide}% + ${changedX}px)`);
+        }
+      });
+
+      coverBox.mouseup(() => {
+        $('.slide-page').removeClass('current-slide');
+        clicked = false;
+        imgBox.css('transition', 'all 0.5s');
+
+        if (changedX <= -150 && curSlide > (imgNum - 1) * -100) {
+          curSlide -= 100;
+          imgBox.css('transform', `translateX(${curSlide}%)`);
+        } else if (changedX >= 150 && curSlide < 0) {
+          curSlide += 100;
+          imgBox.css('transform', `translateX(${curSlide}%)`);
+        } else {
+          imgBox.css('transform', `translateX(${curSlide}%)`);
+        }
+
+        pageIdx = Math.abs(curSlide / 100);
+        $('.slide-page').eq(pageIdx).addClass('current-slide');
+      });
+
+      //Upload Btn + Carousel - Moblie
+      // coverBox.on('touchstart', function (e) {
+      //   e.preventDefault();
+      //   imgBox.css('transition', 'none');
+      //   startX = e.touches[0].clientX;
+      //   clicked = true;
+      // });
+
+      // coverBox.on('touchmove', function (e) {
+      //   changedX = e.touches[0].clientX - startX;
+
+      //   if (clicked) {
+      //     imgBox.css('transform', `translateX(calc(${curSlide}% + ${changedX}px)`);
+      //   }
+      // });
+
+      // coverBox.on('touchend', () => {
+      //   $('.slide-page').removeClass('current-slide');
+      //   clicked = false;
+      //   imgBox.css('transition', 'all 0.5s');
+
+      //   if (changedX <= -200 && curSlide > (imgNum - 1) * -100) {
+      //     curSlide -= 100;
+      //     imgBox.css('transform', `translateX(${curSlide}%)`);
+      //   } else if (changedX >= 200 && curSlide < 0) {
+      //     curSlide += 100;
+      //     imgBox.css('transform', `translateX(${curSlide}%)`);
+      //   } else {
+      //     imgBox.css('transform', `translateX(${curSlide}%)`);
+      //   }
+
+      //   pageIdx = Math.abs(curSlide / 100);
+      //   $('.slide-page').eq(pageIdx).addClass('current-slide');
+      // });
+
+      coverBox.mouseleave(function (e) {
+        e.preventDefault();
+        clicked = false;
+        imgBox.css('transform', `translateX(${curSlide}%)`);
+      });
+
+      //Drag and drop
+      coverBox.on('dragover', function (e) {
+        e.preventDefault();
+        coverBox.css('background-color', 'rgba(0,0,0,0.7)');
+      });
+
+      coverBox.on('dragleave', function (e) {
+        e.preventDefault();
+        coverBox.css('background-color', 'rgba(0, 0, 0, 0)');
+      });
+
+      coverBox.on('drop', function (e) {
+        e.preventDefault();
+        let data = e.originalEvent.dataTransfer.files;
+        coverBox.css('background-color', 'rgba(0, 0, 0, 0)');
+
+        if (uploadValid(data)) {
+          pushToArray(data);
+          base64String(uploadFiles);
+          $('.del-btn').css('visibility', 'visible');
+        }
+      });
+
+      $('.upload-btn').click(() => {
+        $('.upload-input').click();
+      });
+
+      $('.upload-btn').hover(
+        () => {
+          $(this).css('color', 'rgba(255, 255, 255, 1)');
+          coverBox.css('background-color', 'rgba(0,0,0,0.7)');
+        },
+        () => {
+          $(this).css('color', 'rgba(255, 255, 255, 0.5)');
+          coverBox.css('background-color', 'rgba(0, 0, 0, 0)');
+        }
+      );
+
+      $('.upload-input').change(function (e) {
+        let data = e.target.files;
+
+        if (uploadValid(data)) {
+          pushToArray(data);
+          base64String(uploadFiles);
+          $('.del-btn').css('visibility', 'visible');
+        }
+        $(this).val('');
+      });
+
+      //Delete img + array
+      $('.del-btn').click(() => {
+        totalSize = 0;
+        imgBox.html('');
+        slideBox.html('');
+        uploadFiles = uploadFiles.filter((item, idx) => {
+          return idx != pageIdx;
+        });
+        imgNum = uploadFiles.length;
+        uploadFiles.forEach((item, idx) => {
+          totalSize += item.size;
+        });
+        base64String(uploadFiles);
+      });
+
+      //Posting
+      $('.submit-btn').click(() => {
+        let formData = new FormData();
+        let title = $('.title').val();
+        let content = $('.content').val();
+
+        if (!title || !content) {
+          alert('모든칸을 작성해주세요');
+          return;
+        }
+
+        if (uploadFiles.length > 0) {
+          uploadFiles.forEach((item, idx) => {
+            formData.append('upload', item);
+          });
+        }
+        formData.append('title', title);
+        formData.append('content', content);
+
+        $.ajax({
+          method: 'POST',
+          url: '/posting/add-item',
+          data: formData,
+          processData: false,
+          contentType: false,
+        })
+          .then((data) => {
+            alert(data.message);
+            window.location.replace('/posting/list');
+          })
+          .catch((err) => {
+            console.log(err);
+            alert(err.responseJSON.message);
+            return;
+          });
+      });
+
+      //Cancle
+      $('.cancle-btn').click(() => {
+        window.location.href = '/posting/list';
+      });
+
+      //Push files into array
+      let totalSize = 0;
+      function pushToArray(data) {
+        imgBox.html('');
+        slideBox.html('');
+        for (let i = 0; i < data.length; i++) {
+          totalSize += data[i].size;
+          uploadFiles.push(data[i]);
+        }
+        imgNum = uploadFiles.length;
+      }
+
+      //Upload Valid
+      function uploadValid(data) {
+        let uploadSize = 0;
+        let ext = [];
+
+        for (let i = 0; i < data.length; i++) {
+          uploadSize += data[i].size;
+          ext.push(data[i].name.split('.').pop().toLowerCase());
+        }
+
+        if (data.length + uploadFiles.length > 3) {
+          alert('최대 업로드 사진은 3개 입니다');
+          return false;
+        }
+        if (totalSize + uploadSize > 1024 * 1024 * 5) {
+          alert('최대 업로드 용량은 5MB 입니다');
+          return false;
+        }
+
+        let invalidExt = ext.filter((extention) => !['jpg', 'jpeg', 'png'].includes(extention));
+        if (invalidExt.length > 0) {
+          alert('사진만 업로드 가능합니다 (jpg , jpeg , png)');
+          return false;
+        }
+        return true;
+      }
+
+      //Base64 String
+      async function base64String(data) {
+        curSlide = 0;
+        if (data.length > 0) {
+          for (let i = 0; i < data.length; i++) {
+            let base64Str = await dataURL(data[i]);
+
+            imgBox.append(`<img src="${base64Str}" class="card-img-top" alt="itemImg" />`);
+            if (i == 0) {
+              slideBox.append(`<div class="slide-page current-slide"></div>`);
+            } else {
+              slideBox.append(`<div class="slide-page"></div>`);
+            }
+          }
+          imgBox.css('transform', `translateX(${curSlide}%)`);
+        } else {
+          imgBox.append(`<img src="/public/index-img.jpg" class="card-img-top" alt="itemImg" />`);
+          $('.del-btn').css('visibility', 'hidden');
+        }
+      }
+
+      function dataURL(file) {
+        return new Promise((resolve, reject) => {
+          let reader = new FileReader();
+
+          reader.onload = function (e) {
+            resolve(e.target.result);
+          };
+
+          reader.onerror = function (err) {
+            reject(err);
+          };
+
+          reader.readAsDataURL(file);
+        });
+      }
+    </script>
+  </body>
+</html>
