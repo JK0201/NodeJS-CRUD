@@ -19,7 +19,9 @@
   <details>
     <summary><b>메인 페이지</b></summary>
     <br>
-    <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/cdb6f703-0733-43e8-920c-2e54b132dbf7" width="45%"/>
+    <div align="center">
+      <img src="https://github.com/JK0201/NodeJS-CRUD/assets/124655981/cdb6f703-0733-43e8-920c-2e54b132dbf7" width="45%"/>
+    <div>
     <br>
     <p> - 빠른 페이지 이동을 위한 네비게이션 기능</p>
     <p> - 회원가입/로그인 빠른이동
