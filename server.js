@@ -90,7 +90,7 @@ function sessionChk(req, res, next) {
   if (req.user) {
     next();
   } else {
-    res.send(
+    res.status(401).send(
       `
         <script>
           alert('로그인 하세요');
